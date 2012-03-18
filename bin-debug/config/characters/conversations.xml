@@ -1,0 +1,150 @@
+<conversations>
+	<conversation id="QUEST1_CONVERSATION_1"> 
+		<speeches>
+			<speech who="avatar" 		says="Hi!" />
+			<speech who="guard"  		says="Ah, whatever... What do you want?" />
+		</speeches>
+		<responses>
+			<response ask="Where am I?" 	 targetconversation="QUEST1_CONVERSATION_2" />
+			<response ask="Who are you?" 	 targetconversation="QUEST1_CONVERSATION_3" />
+			<response ask="Dead robots" 	 targetconversation="QUEST1_CONVERSATION_4"/>
+			<response ask="Leave" 			 targetconversation="QUEST1_CONVERSATION_1000"/>
+		</responses>
+	</conversation>
+	
+	<conversation id="QUEST1_CONVERSATION_2"> 	
+		<speeches>
+			<speech who="avatar" says="What is this place?" />
+			<speech who="guard"  says="This is the place that you should leave ASAP." />
+			<speech who="guard"  says="Do not waste my time." />
+		</speeches>
+		
+		<responses>
+			<response ask="Where am I?" 	 targetconversation="QUEST1_CONVERSATION_2" />
+			<response ask="Who are you?" 	 targetconversation="QUEST1_CONVERSATION_3" />
+			<response ask="Dead robots" 	 targetconversation="QUEST1_CONVERSATION_4"/>
+			<response ask="Leave" 			 targetconversation="QUEST1_CONVERSATION_1000"/>
+
+		</responses>
+	</conversation>
+
+	<conversation id="QUEST1_CONVERSATION_3"> 	
+		<speeches>
+			<speech who="avatar" says="Who are you?" />
+			<speech who="guard"  says="I am officer McBender." />
+			<speech who="guard"  says="Now leave this place, seriously!" />
+			<speech who="guard"  says="..." />
+			<speech who="avatar" says="(I guess I am not welcome here)" />
+			<speech who="guard"  says="What are you murmuring about, huh?" />
+			<speech who="guard"  says="Oh boy, I hate this place..." />
+		</speeches>
+		<responses>
+			<response ask="Where am I?" 	 targetconversation="QUEST1_CONVERSATION_2" />
+			<response ask="Who are you?" 	 targetconversation="QUEST1_CONVERSATION_3" />
+			<response ask="Dead robots" 	 targetconversation="QUEST1_CONVERSATION_4"/>
+			<response ask="Leave" 			 targetconversation="QUEST1_CONVERSATION_1000"/>
+		</responses>
+	</conversation>
+	
+	
+	<conversation id="QUEST1_CONVERSATION_4"> 	
+		<speeches>
+			<speech who="avatar" says="I saw dead robots while I was coming here" />
+			<speech who="avatar" says="Any chance that you know about them?" />
+			<speech who="guard"  says="Someone has deactivated them with an EMP shock" />
+			<speech who="guard"  says="When I got here, it was all too late" />
+			<speech who="guard"  says="Now I have to take them to junkyard" />
+			<speech who="avatar"  says="To bury them?" />
+			<speech who="guard"  says="Bury? Why would I bury them?" />
+			<speech who="guard"  says="The owner of that place pays good for robots." />
+		</speeches>		
+		<responses>
+			<response ask="Where am I?" 	 targetconversation="QUEST1_CONVERSATION_2" />
+			<response ask="Who are you?" 	 targetconversation="QUEST1_CONVERSATION_3" />
+			<response ask="Dead robots" 	 targetconversation="QUEST1_CONVERSATION_4"/>
+			<response ask="Leave" 			 targetconversation="QUEST1_CONVERSATION_1000"/>
+		</responses>
+	</conversation>
+	
+	<conversation id="QUEST1_DEAD_NOTHING"> 	
+		<speeches>
+			<speech who="avatar" says="That poor guy had no chance to fight..." />
+		</speeches>
+		
+		<responses>
+		</responses>
+	</conversation>
+
+	<conversation id="QUEST1_DEAD_SHOT"> 	
+		<speeches>
+			<speech who="avatar" says="Wait a minute..." />
+			<speech who="avatar" says="This looks different..." />
+			<speech who="avatar" says="..." />
+			<speech who="avatar" says="This one is not EMP'ed, its shot by a lazer gun!" />
+			<speech who="avatar" says="Why would that be?" />
+		</speeches>
+		
+		<responses>
+		</responses>
+	</conversation>
+	
+	<conversation id="QUEST1_CONVERSATION_5"> 
+		<speeches>
+			<speech who="avatar" 		says="Hi!" />
+			<speech who="guard"  		says="Ah, whatever... What do you want?" />
+		</speeches>
+		<responses>
+			<response ask="The shot robot" 	 targetconversation="QUEST1_CONVERSATION_6"/>
+			<response ask="Leave" 			 targetconversation="QUEST1_CONVERSATION_1000"/>
+		</responses>
+	</conversation>
+	
+	<conversation id="QUEST1_CONVERSATION_6"> 
+		<speeches>
+			<speech who="avatar" 		says="I noticed something strange with the dead robots." />
+			<speech who="guard"  		says="What did you notice, smart ass?" />
+			<speech who="avatar" 		says="You said all of them were killed by an EMP shock." />
+			<speech who="avatar" 		says="However, one of them was killed by a lazer gun." />
+			<speech who="guard"  		says="Ahm, yeah? So what do you mean?" />
+		</speeches>
+		<responses>
+			<response ask="Nothing..." 	 	 targetconversation="QUEST1_CONVERSATION_8" />
+			<response ask="You killed it" 	 targetconversation="QUEST1_CONVERSATION_10" />
+		</responses>
+	</conversation>
+	
+	<conversation id="QUEST1_CONVERSATION_8"> 
+		<speeches>
+			<speech who="avatar" 		says="Err... I did not mean anything officer..." />
+			<speech who="avatar" 		says="I am leaving already..." />
+			<speech who="guard"  		says="Good boy..." />
+		</speeches>
+		<responses>
+		</responses>
+	</conversation>
+	
+	<conversation id="QUEST1_CONVERSATION_10"> 
+		<speeches>
+			<speech who="avatar" 		says="I mean, you KILLED IT!" />
+			<speech who="avatar" 		says="And I wonder who set off the EMP at the first place..." />
+			<speech who="guard"  		says="DAMN IT!" />
+			<speech who="guard"  		says="I WILL KILL YOU LIKE I KILLED THE OTHERS!!" />
+			<speech who="guard"  		says="AND SELL YOUR SPARE PARTS TOO!!!" />
+			<speech who="guard"  		says="GUYS! ATTAAAAACK!!!" />
+			
+		</speeches>
+		<responses>
+		</responses>
+	</conversation>
+	
+	<conversation id="QUEST1_CONVERSATION_1000"> 
+		<speeches>	
+			<speech who="avatar" says="Good bye." />
+			<speech who="guard"  says="Just, leave..." />
+		</speeches>
+		
+		<responses>
+		</responses>
+		
+	</conversation>
+</conversations>

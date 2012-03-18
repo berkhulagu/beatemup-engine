@@ -1,0 +1,470 @@
+<statemachines>
+	
+	<!-- intro quest -->
+	<statemachine id="20" type="quest_1" >
+		<state id="10">
+			<behaviours>
+			</behaviours>
+
+			<rules>
+				<rule state="15" >
+					<levelinitialized />
+				</rule>
+			</rules>
+		</state>
+		
+		<state id="15">
+			<behaviours>
+				<camera	    minX="400" maxX="3700" tween="1"/>
+				<walkLimit  minX="0" minY="-90" maxX="3600" maxY="-10" />
+				<addcharacter type="addEnemy"  enemyid="dead_1" 	enemytype="Soldier2_static" posX="1500" posY="-60"   statemanager="1000" initialstate="130" />
+				<addcharacter type="addEnemy"  enemyid="dead_2" 	enemytype="Soldier2_static" posX="1900" posY="-90"   statemanager="1000" initialstate="130" />
+				<addcharacter type="addEnemy"  enemyid="dead_3" 	enemytype="Soldier2_static" posX="2400" posY="-20"   statemanager="1000" initialstate="130" />
+				<addcharacter type="addEnemy"  enemyid="dead_4" 	enemytype="Soldier2_static" posX="2700" posY="-50"   statemanager="1000" initialstate="130" />
+				<addcharacter type="addEnemy"  enemyid="dead_5" 	enemytype="Soldier2_static" posX="3050" posY="-80"   statemanager="1000" initialstate="130" />
+				
+				<addcharacter type="addEnemy"  enemyid="guard" 	enemytype="Soldier2_static" posX="3700" posY="-60"   statemanager="1000" initialstate="10" />
+				<setconversation characterid="guard" conversationid="QUEST1_CONVERSATION_1" />
+				<addconversationlistener conversationid="QUEST1_CONVERSATION_4" characterid="quest_1" state="17" />
+			</behaviours>
+
+			<rules>
+			</rules>
+		</state>
+		
+		<state id="17">
+			<behaviours>
+				<setconversation characterid="dead_1" conversationid="QUEST1_DEAD_NOTHING" />
+				<setconversation characterid="dead_2" conversationid="QUEST1_DEAD_SHOT" />
+				<setconversation characterid="dead_3" conversationid="QUEST1_DEAD_NOTHING" />
+				<setconversation characterid="dead_4" conversationid="QUEST1_DEAD_NOTHING" />
+				<setconversation characterid="dead_5" conversationid="QUEST1_DEAD_NOTHING" />
+				<addconversationlistener conversationid="QUEST1_DEAD_SHOT" characterid="quest_1" state="18" />
+			</behaviours>
+
+			<rules>
+			</rules>
+		</state>
+		
+		<state id="18">
+			<behaviours>
+				<setconversation characterid="dead_1" conversationid="" />
+				<setconversation characterid="dead_3" conversationid="" />
+				<setconversation characterid="dead_4" conversationid="" />
+				<setconversation characterid="dead_5" conversationid="" />
+			
+				<setconversation characterid="guard" conversationid="QUEST1_CONVERSATION_5" />
+				<addconversationlistener conversationid="QUEST1_CONVERSATION_10" characterid="quest_1" state="20" />
+			</behaviours>
+
+			<rules>
+			</rules>
+		</state>
+		<state id="20">
+			<behaviours>
+				<addcharacter type="addEnemy"  enemyid="guard_friend1" 	enemytype="Soldier2_static" posX="4000" posY="-20"   statemanager="1000" initialstate="100" />
+				<addcharacter type="addEnemy"  enemyid="guard_friend2" 	enemytype="Soldier2_static" posX="4000" posY="-110"   statemanager="1000" initialstate="100" />
+				
+				<setconversation characterid="dead_2" conversationid="" />
+				<setconversation characterid="guard" conversationid=""/>
+				<updatecharacterstate characterid="guard" state="120" />
+				
+<!--				<camera	    minX="400" maxX="4500" tween="1"/> -->
+				<walkLimit  minX="0" minY="-90" maxX="4100" maxY="-10" />
+				
+			</behaviours>
+
+			<rules>
+			</rules>
+		</state>
+		
+		
+			
+		
+		<state id="100">
+			<behaviours>
+			</behaviours>
+			
+			<rules>
+				<rule state="110" >
+					<avatar_passed_hotspot value="1" />
+				</rule>
+			</rules>
+		</state>
+		
+		<state id="110">
+			<behaviours>
+				<log text="Level 1" />
+				<addcharacter type="addEnemy"  enemyid="hello_1_1" 	enemytype="Soldier2_static" posX="2200" posY="-65"   statemanager="1000" initialstate="0" />
+				<follow 	source="hello_1_1" target="avatar" offsetx="100" offsety="10" /> 
+				<camera	    minX="1400" maxX="1400" />
+				<walkLimit  minX="1300" minY="-90" maxX="2100" maxY="-10" />
+			
+			
+			</behaviours>
+			
+			<rules>
+				<rule state="115" >
+					<characterdead value="hello_1_1" />
+				</rule>
+			
+			</rules>
+		</state>
+		
+		<state id="115">
+			<behaviours>
+				<camera	    minX="1400" maxX="9400" tween="1"/>
+				<walkLimit  minX="1300" minY="-90" maxX="9100" maxY="-10" />
+			</behaviours>
+			
+			<rules>
+				<rule state="120" >
+					<avatar_passed_hotspot value="2" />
+				</rule>
+			</rules>
+		</state>
+		
+		<state id="120">
+			<behaviours>
+				<log text="Level 2" />
+				<camera	    minX="3000" maxX="3000" />
+				<walkLimit  minX="2900" minY="-90" maxX="3700" maxY="-10" />
+				<addcharacter type="addEnemy"  enemyid="hello_2_1" 	enemytype="Soldier2_static" posX="3800" posY="-25"   statemanager="1000" initialstate="0" />
+				<addcharacter type="addEnemy"  enemyid="hello_2_2" 	enemytype="Soldier2_static"	posX="2700" posY="-25"   statemanager="1000" initialstate="0" />
+				<addcharacter type="addEnemy"  enemyid="hello_2_3" 	enemytype="KamikazeBot" 	posX="3800" posY="-85"   statemanager="1001" initialstate="0" />
+				<follow 	source="hello_2_1" target="avatar" offsetx="100" offsety="10" /> 
+				<follow 	source="hello_2_2" target="avatar" offsetx="100" offsety="10" /> 
+				<follow 	source="hello_2_3" target="avatar" offsetx="50" offsety="10" /> 
+				
+			</behaviours>
+			
+			<rules>
+				<rule state="125" >
+					<characterdead value="hello_2_1" />
+					<characterdead value="hello_2_2" />
+					<characterdead value="hello_2_3" />
+				</rule>
+			</rules>
+		</state>
+		
+		<state id="125">
+			<behaviours>
+				<camera	    minX="3000" maxX="9000" />
+				<walkLimit  minX="2900" minY="-90" maxX="9700" maxY="-10" />
+			</behaviours>
+			
+			<rules>
+				<rule state="130" >
+					<avatar_passed_hotspot value="3" />
+				</rule>
+			</rules>
+		</state>
+		
+		<state id="130">
+			<behaviours>
+				<log text="Level 3" />
+				<camera	    minX="4500" maxX="4500" />
+				<walkLimit  minX="4400" minY="-90" maxX="5200" maxY="-10" />
+				<addcharacter type="addEnemy"  enemyid="hello_3_1" 	enemytype="Soldier2_static" posX="5500" posY="-25"   statemanager="1000" initialstate="0" />
+				<addcharacter type="addEnemy"  enemyid="hello_3_2" 	enemytype="Soldier2_static"	posX="4100"  posY="-25"   statemanager="1000" initialstate="0" />
+				<addcharacter type="addEnemy"  enemyid="hello_3_3" 	enemytype="KamikazeBot" 	posX="5400" posY="-85"   statemanager="1001" initialstate="0" />
+				<addcharacter type="addEnemy"  enemyid="hello_3_4" 	enemytype="Soldier2_static"	posX="4200"  posY="-75"   statemanager="1000" initialstate="0" />
+				<addcharacter type="addEnemy"  enemyid="hello_3_5" 	enemytype="KamikazeBot" 	posX="5460" posY="-55"   statemanager="1001" initialstate="0" />
+				<follow 	source="hello_3_1" target="avatar" offsetx="100" offsety="10" /> 
+				<follow 	source="hello_3_2" target="avatar" offsetx="115" offsety="10" /> 
+				<follow 	source="hello_3_3" target="avatar" offsetx="50" offsety="10" /> 
+				<follow 	source="hello_3_4" target="avatar" offsetx="110" offsety="10" /> 
+				<follow 	source="hello_3_5" target="avatar" offsetx="50" offsety="10" /> 
+			</behaviours>
+			
+			<rules>
+				<rule state="135" >
+					<characterdead value="hello_3_1" />
+					<characterdead value="hello_3_2" />
+					<characterdead value="hello_3_3" />
+					<characterdead value="hello_3_4" />
+					<characterdead value="hello_3_5" />
+				</rule>
+			</rules>
+		</state>
+		
+		<state id="135">
+			<behaviours>
+				<camera	    minX="4500" maxX="9000" />
+				<walkLimit  minX="4400" minY="-90" maxX="9700" maxY="-10" />
+			</behaviours>
+			
+			<rules>
+				<rule state="140" >
+					<avatar_passed_hotspot value="4" />
+				</rule>
+			</rules>
+		</state>
+		
+		<state id="140">
+			<behaviours>
+				<log text="completed the game!" />
+				<camera	    minX="5500" maxX="5500" />
+				<walkLimit  minX="5400" minY="-90" maxX="6200" maxY="-10" />
+			</behaviours>
+			
+			<rules>
+			</rules>
+		</state>
+	</statemachine>
+	
+	<!-- avatar -->
+	<statemachine id="999" type="avatar" >
+		<state id="0">
+			<behaviours>
+			</behaviours>
+
+			<rules>
+				<rule state="10" >
+					<levelinitialized />
+				</rule>
+			</rules>
+		</state>
+		
+		<state id="10">
+			<behaviours>
+				<animation 	value="Still" />
+				<speed 		value="0" />					
+			</behaviours>
+			
+			<rules>
+			</rules>
+
+		</state>	
+	</statemachine>
+	
+	<!-- soldier -->
+	<statemachine id="1000" type="Soldier2_static" >
+		<state id="10">
+			<behaviours>
+				<facing		value="180" />
+				<animation value="Soldier_still_001" />
+				<speed value="1" />
+			</behaviours>
+
+			<rules>
+			</rules>
+		</state>
+		
+		<state id="100">
+			<behaviours>
+				<facing		value="180" />
+				<animation 	value="Soldier_Run_001" />
+				<speed 		value="100" />	
+				<follow 	target="avatar" offsetx="100" offsety="10" /> 
+
+			</behaviours>
+
+			<rules>
+				
+				<rule state="110">
+					<avatar_distance_equals_or_smaller value="120" />
+					<avatar_distance_y_smaller_than value="10" />
+				</rule>
+				<rule state="130">
+					<mylife_equals_or_smaller value="0" />
+				</rule>
+			</rules>
+
+		</state>
+		
+		<state id="110">
+			<behaviours>
+				<animation value="Soldier_still_001" />
+				<speed value="0" />					
+			</behaviours>
+			
+			<rules>
+				<rule state="100">
+					<avatar_distance_equals_or_bigger value="130" />
+				</rule>
+				<rule state="100">
+					<avatar_distance_y_greater_than value="15" />
+				</rule>
+				<rule state="120">
+					<timer value="500"/>
+				</rule>
+				<rule state="130">
+					<mylife_equals_or_smaller value="0" />
+				</rule>
+			</rules>
+		</state>
+		
+		<state id="120">
+			<behaviours>
+				<animation value="Soldier_shoot" />
+				<speed value="0" />	
+			</behaviours>
+			
+			<rules>
+				<rule state="100">
+					<avatar_distance_equals_or_bigger value="130" />
+				</rule>
+				<rule state="100">
+					<avatar_distance_y_greater_than value="15" />
+				</rule>
+				<rule state="123">
+					<timer value="1000" /> 
+				</rule>
+				<rule state="130">
+					<mylife_equals_or_smaller value="0" />
+				</rule>
+				
+			</rules>
+		</state>
+		
+		<state id="123">
+			<behaviours>
+				<dealdamage value="1" />
+			</behaviours>
+		
+			<rules>
+				<rule state="120">
+					<!-- get back to shooting after a shooting is performed, a shoot takes 0.5 secs + 1 seconds of warmup-->
+					<timer value="500" /> 
+				</rule>
+				<rule state="130">
+					<mylife_equals_or_smaller value="0" />
+				</rule>
+			</rules>
+			
+		</state>
+		
+		
+		<state id="130">
+			<behaviours>
+				<animation value="SoldierFall" />
+				<speed value="0" />					
+			</behaviours>
+		
+			<rules>
+			</rules>
+			
+		</state>
+		
+	</statemachine>
+	
+	<!-- kamikaze -->
+	<statemachine id="1001" type="KamikazeBot" >
+		<state id="0">
+			<behaviours>
+				<facing		value="180" />
+				<animation 	value="KamakazieBot_001" />
+				<speed 		value="100" />	
+			</behaviours>
+			
+			<rules>
+				
+				<rule state="10">
+					<avatar_distance_equals_or_smaller value="55" />
+					<avatar_distance_y_smaller_than value="10" />
+				</rule>
+				<rule state="35">
+					<mylife_equals_or_smaller value="0" />
+				</rule>
+			</rules>
+
+		</state>
+		
+		<state id="10">
+			<behaviours>
+				<speed value="0" />					
+			</behaviours>
+			
+			<rules>
+				<rule state="0">
+					<avatar_distance_equals_or_bigger value="60" />
+				</rule>
+				<rule state="0">
+					<avatar_distance_y_greater_than value="15" />
+				</rule>
+				<rule state="20">
+					<timer value="500"/>
+				</rule>
+				<rule state="35">
+					<mylife_equals_or_smaller value="0" />
+				</rule>
+			</rules>
+		</state>
+		
+		<state id="20">
+			<behaviours>
+				<log text="explosion sequence initiated..." />
+				<animation value="explode" />
+				<speed value="0" />	
+			</behaviours>
+			
+			<rules>
+				<rule state="23">
+					<timer value="1000" /> 
+				</rule>
+				<rule state="35">
+					<mylife_equals_or_smaller value="0" />
+				</rule>
+				
+			</rules>
+		</state>
+		
+		<state id="23">
+			<behaviours>
+			</behaviours>
+		
+			<rules>
+				<rule state="26">
+					<avatar_distance_equals_or_smaller value="70" />
+					<avatar_distance_y_smaller_than value="20" />
+				</rule>
+			
+				<rule state="30">
+					<avatar_distance_equals_or_bigger value="70" />
+				</rule>
+				<rule state="30">
+					<avatar_distance_y_greater_than value="20" />
+				</rule>
+			</rules>
+		</state>	
+			
+		<state id="26">
+			<behaviours>
+				<log text="BAAAAAAAAAAAAAAAM!!!! Inflected damage!" />
+				<dealdamage value="0" />
+				<health value="0" />
+			</behaviours>
+		
+			<rules>
+			</rules>
+		</state>
+		
+		
+		<state id="30">
+			<behaviours>
+				<log text="BAAAAAAAAAAAAM!! but you were away..." />
+				<speed value="0" />		
+				<health value="0" />
+							
+			</behaviours>
+		
+			<rules>
+			</rules>
+			
+		</state>
+		
+		<state id="35">
+			<behaviours>
+				<animation value="dead" />
+				<log text="You killed the kamikaze bot!!" />
+				<speed value="0" />								
+			</behaviours>
+		
+			<rules>
+			</rules>
+			
+		</state>
+		
+	</statemachine>
+</statemachines>

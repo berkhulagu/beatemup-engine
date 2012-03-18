@@ -1,0 +1,33 @@
+
+<config>
+	<characters>
+		<character type="avatar" >
+			<animation name="Still" 				url="Still" />
+			<animation name="RunA_001" 				url="RunA_001" />
+			<animation name="RunB_001" 				url="RunB_001" />
+			<animation name="Slide_002" 			url="Slide_002" />
+			<animation name="Jump_001" 				url="Jump_001" />
+			<animation name="JumpUpdate_01" 		url="JumpUpdate_01" />
+			<animation name="Melee" 				url="Melee" />
+		</character>
+		<character type="Soldier2_static" >
+			<animation name="Soldier_Run_001" 				url="Soldier_Run_001" />
+			<animation name="Soldier_still_001" 			url="Soldier_still_001" />
+			<animation name="Soldier_shoot" 				url="Soldier_shoot" />
+			<animation name="SoldierFall" 					url="SoldierFall" />
+			<animation name="Soldier_HitandFall" 			url="Soldier_HitandFall" />
+			<animation name="soldier_shoot_rBACKeaction" 	url="soldier_shoot_rBACKeaction" />
+		</character>
+		<character type="FlyBot" >
+			<animation name="FlyBot_001" 					url="FlyBot_001" />
+			<animation name="FlyBot_CollisionReaction" 		url="FlyBot_CollisionReaction" />
+			<animation name="FlyBot_dying_roll" 			url="FlyBot_dying_roll" />	
+		</character>
+		<character type="KamikazeBot" >
+			<animation name="KamakazieBot_001" 	url="KamakazieBot_001" />
+			<animation name="explode" 			url="explode" />
+			<animation name="dead" 				url="dead" />
+		</character>
+	</characters>
+
+</config>

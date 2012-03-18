@@ -1,0 +1,38 @@
+<level id="1">
+	
+	<layers>
+		<layer name="elec" 			speedcoef="0.125" />
+		<layer name="bush" 			speedcoef="0.6" />
+		<layer name="road" 			speedcoef="1" />
+	</layers>
+	
+	<characters>
+		<character type="avatar" />
+		<character type="Soldier2_static" />
+		<character type="KamikazeBot" />
+		<character type="FlyBot" />
+	</characters>	
+	
+	<characterpositions>
+		<character id="quest_1"		type="quest"			statemanager="20" 	initialstate="10"	posX="0" 	posY="0"  />		
+		<character id="avatar" 		type="avatar" 			statemanager="999" 	initialstate="0"	posX="10" 	posY="-60"  />		
+	</characterpositions>
+	
+	<hotspots>
+		<hotspot id="1" type="getin" limit="1" x="1400" y="-85" radius="100" /> 
+		<hotspot id="2" type="getin" limit="1" x="3000" y="-85" radius="100" /> 
+		<hotspot id="3" type="getin" limit="1" x="4500" y="-85" radius="100" /> 
+		<hotspot id="4" type="getin" limit="1" x="5500" y="-85" radius="100" /> 
+	</hotspots>
+	
+	
+	<clones>
+		<clone layer="elec" id="elec" 		numberoftimes="-1" /> 
+		<clone layer="bush" id="bush" 		numberoftimes="-1" />
+		<clone layer="road" id="road" 		numberoftimes="1" /> 
+		<clone layer="road" id="road2"		previous="road" numberoftimes="3" />
+		<clone layer="road" id="road4"		previous="road2" numberoftimes="1" />
+	<!-- -->
+	</clones>
+
+</level>
